@@ -2,6 +2,7 @@ package db;
 
 import java.sql.*;
 
+
 public class DBConnect {
 	
 	String address = "jdbc:mysql://nsyun.synology.me:3306/";
