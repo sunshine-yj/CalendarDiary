@@ -57,12 +57,12 @@ public class MainCalendarFrame extends JFrame implements ActionListener{
 		// 캘린더 버튼 (아직 이벤트 처리 안함)
 		calendarMonthDown  = new JButton("<");
 		calendarMonthUp = new JButton(">");
-		calendarMonthDown.addActionListener(null);
-		calendarMonthUp.addActionListener(null);
+		calendarMonthDown.addActionListener(this);
+		calendarMonthUp.addActionListener(this);
 		// 캘린더 년,월 출력 패널
 		date = LocalDate.now();
 		calendarY = new JTextField(String.valueOf(date.getYear()));
-		calendarM = new JTextField(String.valueOf(date.getMonth()));
+		calendarM = new JTextField(String.valueOf(date.getMonthValue()));
 		// 캘린더 상단바 배치
 		calendarSwitchPanel.add(calendarMonthDown);
 		calendarSwitchPanel.add(calendarY);
@@ -76,14 +76,19 @@ public class MainCalendarFrame extends JFrame implements ActionListener{
 		
 	}
 	
+	
 	// 캘린더 상단바 월 변경 버튼 이벤트 처리
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if(e.getSource()==calendarMonthDown) {
-			
+			date = date.minusMonths(1);
+			calendarY.setText(String.valueOf(date.getYear()));
+			calendarM.setText(String.valueOf(date.getMonthValue()));
 		}
 		if(e.getSource()==calendarMonthUp) {
-			
+			date = date.plusMonths(1);
+			calendarY.setText(String.valueOf(date.getYear()));
+			calendarM.setText(String.valueOf(date.getMonthValue()));
 		}
 	}
 	
