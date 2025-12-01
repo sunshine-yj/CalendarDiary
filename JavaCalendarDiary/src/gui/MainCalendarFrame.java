@@ -117,6 +117,7 @@ public class MainCalendarFrame extends JFrame implements ActionListener{
 		} else {
 			viewMemo.setText(memo);
 		}
+		
 	}
 	
 	
