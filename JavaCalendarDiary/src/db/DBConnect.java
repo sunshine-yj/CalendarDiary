@@ -5,9 +5,9 @@ import java.sql.*;
 
 public class DBConnect {
 	
-	String address = "jdbc:";
-	String dbname = "";// db는 테이블 명 (새로 만들경우 수정해야함)
-	String dbAddress = address + dbname;
+	String address ="jdbc:mysql://nsyun.synology.me:3306/db";
+//	String dbname = "db";// db는 테이블 명 (새로 만들경우 수정해야함)
+//	String dbAddress = address + dbname;
 	String uid = "";
 	String pwd = "";
 	String jdbc_driver = "";
