@@ -72,6 +72,7 @@ public class MainCalendarFrame extends JFrame implements ActionListener{
 		
 		
 		// 캘린더 메인 버튼(Center)
+		calendarPanel = new JPanel();
 		
 		
 	}
@@ -109,7 +110,8 @@ public class MainCalendarFrame extends JFrame implements ActionListener{
 	// 캘린더 메모 호출(호출되는거 확인함)
 	void getMemoDB() {
 		CalendarDAO calendarDB = new CalendarDAO();
-//		_uid = "id01"; // 회원 아이디를 로그인할때 따로 저장해야 함
+		// 임시 아이디 지정
+		_uid = "id01"; // 회원 아이디를 로그인할때 따로 저장해야 함
 		
 		// 금일 날짜 
 		LocalDate today = LocalDate.now();
