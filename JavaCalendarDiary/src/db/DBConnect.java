@@ -6,8 +6,6 @@ import java.sql.*;
 public class DBConnect {
 	
 	String address ="jdbc:mysql://nsyun.synology.me:3306/db";
-//	String dbname = "db";// db는 테이블 명 (새로 만들경우 수정해야함)
-//	String dbAddress = address + dbname;
 	String uid = "user";
 	String pwd = "user1234";
 	String jdbc_driver = "com.mysql.cj.jdbc.Driver";
@@ -18,7 +16,7 @@ public class DBConnect {
 			Class.forName(jdbc_driver);
 		}catch(ClassNotFoundException e) {
 			System.out.println("->JDBC Driver 오류");
-			// e.printStackTrace();
+			e.printStackTrace();
 		}
 	}
 	
